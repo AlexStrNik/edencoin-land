@@ -1,6 +1,18 @@
+@font-face {
+    font-family: AleppoBold;
+    src: url(../fonts/Aleppo-Bold.ttf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: SFUI;
+    src: url(../fonts/SF-UI-Display-Black.ttf);
+    font-weight: bold;
+}
 * {
     box-sizing: border-box;
+    --blue-color: red;
 }
+
 header{
     height: 100vh;
     width: 100%;
@@ -8,7 +20,7 @@ header{
     margin: 0;
     text-align: center;
     display: flex;
-    background: url("../img/photo_2018-03-05_21-37-57.jpg") no-repeat center;
+    background: url("../img/header.jpg") no-repeat fixed center;
     background-size: cover;
 }
 body{
@@ -20,7 +32,9 @@ body{
 }
 header > h1 {
     margin: auto;
-    color: white;
+    color: #EFC2FE;
+    font-size: 20vh;
+    font-family: AleppoBold, serif;
 }
 html{
     padding: 0;
@@ -33,16 +47,37 @@ html{
     overflow-y: scroll;
 }
 #overview{
-    margin-top: 20vh;
+    margin-top: 5vh;
+    margin-bottom: 20vh;
     text-align: center;
 }
+#overview > h3{
+    font-family: SFUI, serif;
+    color: #6796BF;
+    font-size: 10vh;
+}
 #columns{
+    padding-top: 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 #left, #right {
     flex-grow: 1;
+    flex-basis: 0;
+    text-align: justify;
+    margin-top: 0;
+    padding-top: 0;
+}
+#left > div, #right > div {
+    width: 50%;
+    margin: auto;
+}
+#left > div > h6, #right > div > h6 {
+    font-family: SFUI, serif;
+    font-size: larger;
+    color: #271929;
+    margin-top: 0;
 }
 #scroll{
     width: 100%;
