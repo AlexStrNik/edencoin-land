@@ -48,8 +48,12 @@ html{
 }
 #overview{
     margin-top: 5vh;
-    margin-bottom: 20vh;
     text-align: center;
+}
+#second{
+    background: url("../img/second.jpg") no-repeat center;
+    background-size: cover;
+    padding-bottom: 20vh;
 }
 #overview > h3{
     font-family: SFUI, serif;
