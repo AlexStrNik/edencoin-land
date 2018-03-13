@@ -10,11 +10,18 @@
 }
 * {
     box-sizing: border-box;
-    --blue-color: red;
 }
-
+@media(orientation: portrait){
+    header{
+        height: 50vh;
+    }
+}
+@media(orientation: landscape) {
+    header{
+        height: 100vh;
+    }
+}
 header{
-    height: 100vh;
     width: 100%;
     padding: 0;
     margin: 0;
@@ -32,8 +39,8 @@ body{
 }
 header > h1 {
     margin: auto;
-    color: #EFC2FE;
-    font-size: 20vh;
+    color: white;
+    font-size: 10vw;
     font-family: AleppoBold, serif;
 }
 html{
@@ -46,43 +53,94 @@ html{
     height: 100vh;
     overflow-y: scroll;
 }
-#overview{
+.overview{
     margin-top: 5vh;
     text-align: center;
 }
 #second{
     background: url("../img/second.jpg") no-repeat center;
     background-size: cover;
-    padding-bottom: 20vh;
+    padding-bottom: 15vw;
 }
-#overview > h3{
+.overview > h3{
     font-family: SFUI, serif;
     color: #6796BF;
-    font-size: 10vh;
+    font-size: 5vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
 }
-#columns{
+.columns{
     padding-top: 0;
     display: flex;
     flex-direction: row;
+    flex-flow: wrap;
+    flex-wrap: wrap;
     justify-content: center;
 }
-#left, #right {
+.left, .right {
     flex-grow: 1;
     flex-basis: 0;
     text-align: justify;
     margin-top: 0;
     padding-top: 0;
 }
-#left > div, #right > div {
-    width: 50%;
+.left > div, .right > div {
+    /* width: 50%; */
     margin: auto;
 }
-#left > div > h6, #right > div > h6 {
-    font-family: SFUI, serif;
+.left > div {
+    margin-left: 0;
+}
+.right > div {
+    margin-right: 0;
+}
+.left > div > a, .right > div > a{
     font-size: larger;
+}
+.left > div > h6, .right > div > h6 {
+    font-family: SFUI, serif;
+    font-size: 2vw;
     color: #271929;
     margin-top: 0;
 }
+.one, .two, .three, .four{
+    background: #271929;
+    flex-shrink: 0;
+    flex-grow: 1;
+    height:auto;
+}
+@media(max-device-width: 500px) {
+    .one, .two, .three, .four{
+        flex-basis: 10vw;
+    }
+}
+@media(max-device-width: 500px) {
+    .one, .two, .three, .four{
+        flex-basis: 34vw;
+        flex-grow: 0;
+    }
+}
+.one:before, .two:before, .three:before, .four:before {
+    content:'';
+    float:left;
+    padding-top:100%;
+}
+.whitespace{
+    flex-grow: 0.5;
+    flex-shrink: 1;
+    flex-basis: 2vw;
+}
 #scroll{
     width: 100%;
+}
+#overview2{
+    margin-top: 15vw;
+}
+#overview3{
+    margin-top: 15vw;
+}
+
+#overview3, #overview2, #overview{
+    padding-right: 15vw;
+    padding-left: 15vw;
 }
