@@ -8,6 +8,10 @@
     src: url(../fonts/SF-UI-Display-Black.ttf);
     font-weight: bold;
 }
+@font-face {
+    font-family: SFUIM;
+    src: url(../fonts/SF-UI-Display-Medium.ttf);
+}
 * {
     box-sizing: border-box;
 }
@@ -94,27 +98,27 @@ html{
 .right > div {
     margin-right: 0;
 }
-.left > div > a, .right > div > a{
+.left_caption, .right_caption{
     font-size: larger;
 }
-.left > div > h6, .right > div > h6 {
+.left_title, .right_title {
     font-family: SFUI, serif;
-    font-size: 2vw;
+    font-size: large;
     color: #271929;
     margin-top: 0;
 }
 .one, .two, .three, .four{
-    background: #271929;
+    /* background: #271929;*/
     flex-shrink: 0;
     flex-grow: 0;
     height:auto;
 }
-@media(min-device-width: 500px) {
+@media(min-width: 500px) {
     .one, .two, .three, .four{
         flex-basis: 15vw;
     }
 }
-@media(max-device-width: 500px) {
+@media(max-width: 500px) {
     .one, .two, .three, .four{
         flex-basis: 34vw;
         margin-bottom: 2vw;
@@ -125,6 +129,17 @@ html{
     content:'';
     float:left;
     padding-top:100%;
+}
+.card{
+    background-color: #6796BF;
+    text-align: left;
+    padding: 4vw;
+}
+.card_title {
+    color: #271929;
+    font-family: SFUIM, serif;
+    font-size: larger;
+    margin: 0;
 }
 .whitespace{
     flex-grow: 0.5;
