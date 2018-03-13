@@ -75,7 +75,7 @@ html{
     flex-direction: row;
     flex-flow: wrap;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
 }
 .left, .right {
     flex-grow: 1;
