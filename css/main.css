@@ -78,7 +78,7 @@ html{
     justify-content: space-between;
 }
 .left, .right {
-    flex-grow: 1;
+    flex-grow: 0.42;
     flex-basis: 0;
     text-align: justify;
     margin-top: 0;
@@ -106,17 +106,18 @@ html{
 .one, .two, .three, .four{
     background: #271929;
     flex-shrink: 0;
-    flex-grow: 1;
+    flex-grow: 0;
     height:auto;
 }
-@media(max-device-width: 500px) {
+@media(min-device-width: 500px) {
     .one, .two, .three, .four{
-        flex-basis: 10vw;
+        flex-basis: 15vw;
     }
 }
 @media(max-device-width: 500px) {
     .one, .two, .three, .four{
         flex-basis: 34vw;
+        margin-bottom: 2vw;
         flex-grow: 0;
     }
 }
